@@ -19,21 +19,21 @@ const connect = function() {
     conn.write("Name: RJT");
   })
 
-  // move up at connect
-  conn.on("connect", () => {
-    conn.write("Move: up");
-  })
-  // move one more
-  setTimeout(() => {
-    conn.on("connect", () => {
-      conn.write("Move: up");
-    })
-  },500)
+  // // move up at connect
+  // conn.on("connect", () => {
+  //   conn.write("Move: up");
+  // })
+  // // move one more
+  // setTimeout(() => {
+  //   conn.on("connect", () => {
+  //     conn.write("Move: up");
+  //   })
+  // },500)
 
-  // move with setInterval
-  setInterval(() => {
-    conn.write("Move: up");
-  },1000)
+  // // move with setInterval
+  // setInterval(() => {
+  //   conn.write("Move: up");
+  // },1000)
 
   conn.on("data", (data) => {
     // code that does something when some data is sent
